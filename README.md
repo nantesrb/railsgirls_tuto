@@ -79,12 +79,28 @@ Taper <kbd>Ctrl</kbd>+<kbd>C</kbd> dans le terminal pour quitter le serveur.
 
 ##  2. Créer l’échafaudage de *Idea*
 
-Nous allons utiliser la fonctionnalité d’échafaudage (*scaffold*) de Rails pour commencer le développement à un point où l'on peut déjà **lister** (*index*), **ajouter** (*create*), **supprimer** (*remove*), **modifier** (*update*) et **voir** (*show*) des choses, dans notre cas, des idées (*ideas*).
+Nous allons utiliser la fonctionnalité d’échafaudage (*scaffold*) de Rails pour commencer le développement à un point où l'on peut déjà **lister** (*index*), **ajouter** (*create*), **supprimer** (*destroy*), **modifier** (*update*) et **voir** (*show*) des choses, dans notre cas, des idées (*ideas*).
+
+Mais avant cela, pour simplifier le code qui sera généré, nous allons supprimer (ou commenter) la ligne suivante dans le fichier `Gemfile` qui se trouve à la racine du projet :
+
+```
+gem 'jbuilder', '~> 2.5'
+```
+
+Puis, pour prendre en compte cette modification, exécuter la commande suivante :
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
 
 ```
-rails generate scaffold idea name:string description:text picture:string --no-helper --no-jbuilder
+bundle install
+```
+
+Exécuter ensuite la commande suivante :
+
+<img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
+
+```
+rails generate scaffold idea name:string description:text picture:string --no-helper
 ```
 
 Cette commande crée de nouveaux fichiers dans le répertoire du projet, mais pour que tout fonctionne correctement, nous devons lancer quelques commandes supplémentaires pour mettre à jour la base de données et redémarrer le serveur.
@@ -102,8 +118,7 @@ Naviguez dans votre application et explorer ce qu'a rajouté cette commande d’
 
 ##  3. Design
 
-L'application n'est pas encore très jolie.
-Nous allons utiliser le Framework CSS Bootstrap de Twitter pour rendre les choses un peu plus sympa.
+L'application n'est pas encore très jolie. Nous allons utiliser le Framework CSS Bootstrap de Twitter pour rendre les choses un peu plus sympa.
 
 Ouvrez `app/views/layouts/application.html.erb` dans votre éditeur de texte et au dessus de la ligne :
 
@@ -118,13 +133,13 @@ ajouter :
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.css">
 ```
 
-et remplacer
+et remplacer :
 
 ```html
 <%= yield %>
 ```
 
-par
+par :
 
 ```html
 <div class="container">
@@ -155,7 +170,7 @@ Ajoutons également une barre de navigation et un pied de page (*footer*) au *la
 </nav>
 ```
 
-et avant `</body>` ajouter
+et avant `</body>` ajouter :
 
 ```html
 <footer>
@@ -237,7 +252,7 @@ bundle install
 
 ---
 
-Ouvrir `app/models/idea.rb` et sous la ligne
+Ouvrir `app/models/idea.rb` et sous la ligne :
 
 ```ruby
 class Idea < ApplicationRecord
@@ -249,7 +264,7 @@ ajouter :
 mount_uploader :picture, PictureUploader
 ```
 
-Ouvrir `app/views/ideas/_form.html.erb` et changer
+Ouvrir `app/views/ideas/_form.html.erb` et changer :
 
 ```erb
 <%= f.text_field :picture %>
@@ -260,15 +275,15 @@ par :
 ```erb
 <%= f.file_field :picture, id: :idea_picture %>
 ```
-Dans votre navigateur, ajouter une idée avec une image. Lorsque vous ajouter une image, c'est pas encore très joli parce que ça montre que le chemin (*path*) du fichier, corrigeons ça.
+Dans votre navigateur, ajouter une idée avec une image. Lorsque vous ajouter une image, ce n'est pas encore très joli parce que ça montre que le chemin (*path*) du fichier, corrigeons ça.
 
-Ouvrir `app/views/ideas/show.html.erb` et changer
+Ouvrir `app/views/ideas/show.html.erb` et changer :
 
 ```erb
 <%= @idea.picture %>
 ```
 
-par
+par :
 
 ```erb
 <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
@@ -310,5 +325,5 @@ Vous pouvez maintenant ouvrir le fichier `app/views/pages/info.html.erb` et y aj
 ##  7. La suite ?
 
 * Personnalisez votre design avec du HTML et du CSS.
-* Utilisez du JavaScript pour ajouter de l'interaction utilisateur.
+* Utilisez du JavaScript pour ajouter de l'intéraction utilisateur.
 * Plusieurs guides pour améliorer votre application sont disponibles (la plupart en anglais) sur <http://guides.railsgirls.com/>.
