@@ -93,7 +93,7 @@ Cette commande crée de nouveaux fichiers dans le répertoire du projet, mais po
 
 ```
 rails db:migrate
-rails serveur
+rails server
 ```
 
 Ouvrez <http://localhost:3000/ideas> dans votre navigateur.
