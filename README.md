@@ -10,13 +10,14 @@ Nous allons créer une nouvelle application appelée *railsgirls*.
 
 Ouvrez votre terminal :
 
-* Windows <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="18px"/> : Cliquer sur *Démarrer* et chercher *Command Prompt*, cliquez ensuite sur *Command Prompt with Ruby and Rails*.
+* Windows <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="18px"/> : Cliquer sur *Démarrer* et chercher *Command Prompt*, cliquer ensuite sur *Command Prompt with Ruby and Rails*.
 * Mac OS X <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> : Ouvrir Spotlight, taper *Terminal* et cliquer sur l’application *Terminal*.
 * Linux <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> : Chercher *Terminal* dans le dash et cliquer sur *Terminal*.
 
 Ensuite, taper la commande suivante :
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
+
 ```
 mkdir projects
 ```
@@ -24,6 +25,7 @@ mkdir projects
 Vous pouvez vérifier qu'un répertoire `projects` a été créé en tapant la commande : <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> `ls` ou <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="18px"/> `dir`. Vous pouvez voir le  nom du répertoire `projects` s'afficher. Pour se déplacer à l'intérieur du répertoire `projects`, il faut taper la commande suivante:
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
+
 ```
 cd projects
 ```
@@ -31,22 +33,25 @@ cd projects
 Vous pouvez vérifier que votre répertoire est vide en tapant la commande <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> `ls` ou <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/> `dir`. Nous allons maintenant créer notre nouvelle application appelée `railsgirls` en tapant :
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
+
 ```
 rails new railsgirls -M -C -T --skip-coffee --skip-yarn
 ```
 
-Cela va créer une nouvelle application dans le répertoire `railsgirls`, nous allons à nouveau changer de répertoire pour nous retrouver à l'intérieur de notre application Rails en tapant :
+Cela va créer une nouvelle application dans le répertoire `railsgirls`. Nous allons à nouveau changer de répertoire pour nous retrouver à l'intérieur de notre application Rails en tapant :
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
+
 ```
 cd railsgirls
 ```
 
-Si vous tapez <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> `ls` ou <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>`dir` depuis ce répertoire, vous devriez voir des dossiers tel que `app` and `config`. Vous pouvez lancer le serveur Rails en tapant la commande :
+Si vous tapez <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> `ls` ou <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>`dir` depuis ce répertoire, vous devriez voir des dossiers tel que `app` et `config`. Vous pouvez lancer le serveur Rails en tapant la commande :
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
+
 ```
-rails serveur
+rails server
 ```
 
 Ouvrez <http://localhost:3000> dans votre navigateur.
@@ -74,7 +79,7 @@ Taper <kbd>Ctrl</kbd>+<kbd>C</kbd> dans le terminal pour quitter le serveur.
 
 ##  2. Créer l’échafaudage de *Idea*
 
-Nous allons utiliser la fonctionnalité d’échafaudage (*scaffold*) de Rails pour commencer le développement à un point où l'on peut déjà **lister** (*list*), **ajouter** (*add*), **supprimer**(*remove*), **éditer** (*edit*) et **voir** (*show*) des choses, dans notre cas, des idées (*ideas*).
+Nous allons utiliser la fonctionnalité d’échafaudage (*scaffold*) de Rails pour commencer le développement à un point où l'on peut déjà **lister** (*index*), **ajouter** (*create*), **supprimer** (*remove*), **modifier** (*update*) et **voir** (*show*) des choses, dans notre cas, des idées (*ideas*).
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
 
@@ -82,7 +87,7 @@ Nous allons utiliser la fonctionnalité d’échafaudage (*scaffold*) de Rails p
 rails generate scaffold idea name:string description:text picture:string --no-helper --no-jbuilder
 ```
 
-Cette commande créé de nouveaux fichiers dans le répertoire du projet, mais pour que tout fonctionne correctement, nous devons lancer quelques commandes supplémentaires pour mettre à jour la base de donnée et redémarrer le serveur.
+Cette commande crée de nouveaux fichiers dans le répertoire du projet, mais pour que tout fonctionne correctement, nous devons lancer quelques commandes supplémentaires pour mettre à jour la base de données et redémarrer le serveur.
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
 
@@ -109,8 +114,8 @@ Ouvrez `app/views/layouts/application.html.erb` dans votre éditeur de texte et 
 ajouter :
 
 ```html
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.css">
 ```
 
 et remplacer
@@ -127,8 +132,7 @@ par
 </div>
 ```
 
-Ajoutons également une barre de navigation et un pied de page (*footer*)
-au *layout*. Dans le même fichier, sous `<body>` ajouter :
+Ajoutons également une barre de navigation et un pied de page (*footer*) au *layout*. Dans le même fichier, sous `<body>` ajouter :
 
 ```html
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -172,11 +176,11 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 ```
 
-Sauvegardez tous les fichiers que vous avez modifiés et rafraîchissez votre navigateur pour voir les changements. Vous pourrez continuer à modifier l'HTML et le CSS plus tard pour personnaliser votre application.
+Sauvegardez tous les fichiers que vous avez modifiés et rafraîchissez votre navigateur pour voir les changements. Vous pourrez continuer à modifier le code HTML et le CSS plus tard pour personnaliser votre application.
 
-##  4. Ajout de l'*upload* d'images
+##  4. Prise en charge de l'*upload* d'images
 
-Nous avons besoin d'ajouter un *module* supplémentaire pour nous permettre d'*uploader* des fichiers grâce à Rails.
+Nous avons besoin d'ajouter un module supplémentaire pour nous permettre d'*uploader* des fichiers grâce à Rails.
 
 Ouvrez le fichier `Gemfile` qui se trouve à la racine du répertoire de notre projet et sous la ligne :
 
@@ -202,6 +206,7 @@ bundle install
 ```
 
 Nous pouvons maintenant générer le code qui permettra l'*upload* de fichier, pour notre application, des images.
+
 Dans le terminal, taper la commande :
 
 <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Apple.png&r=38&g=38&b=38" alt="APPLE" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Linux.png&r=38&g=38&b=38" alt="LINUX" width="18px"/> | <img src="http://flaticons.net/gd/makefg.php?i=icons/Brand%20Identity/Windows%208.png&r=38&g=38&b=38" alt="WINDOWS" width="20px"/>
@@ -214,7 +219,7 @@ Relancer le serveur Rails.
 
 ---
 
-**Note** : Vous utilisez peut-être deux terminaux pour garder votre serveur Rails en fonction continuellement. Si c'est le cas, vous devez **redémarrer votre serveur Rails** maintenant. C'est nécessaire pour que l'application charge la nouvelle librairie.
+**Note** : Vous utilisez peut-être deux terminaux pour garder votre serveur Rails en fonction continuellement. Si c'est le cas, vous devez **redémarrer votre serveur Rails** maintenant. C'est nécessaire pour que l'application charge le nouveau module *carrierwave*.
 
 Si vous avez une erreur disant que `uploader cannot be found`, ajouter la ligne suivante au fichier `Gemfile` :
 
@@ -238,7 +243,7 @@ Ouvrir `app/models/idea.rb` et sous la ligne
 class Idea < ApplicationRecord
 ```
 
-ajouter
+ajouter :
 
 ```ruby
 mount_uploader :picture, PictureUploader
@@ -250,7 +255,7 @@ Ouvrir `app/views/ideas/_form.html.erb` et changer
 <%= f.text_field :picture %>
 ```
 
-par
+par :
 
 ```erb
 <%= f.file_field :picture, id: :idea_picture %>
@@ -273,7 +278,7 @@ Rafraîchissez maintenant votre navigateur et regardez le résultat.
 
 ##  5. Affinons nos routes
 
-Ouvrez <http://localhost:3000>. Nous avons toujours la page avec "Yay! You’re on Rails!". Mettons en place une redirection directe vers la page `ideas`
+Ouvrez <http://localhost:3000>. Nous avons toujours la page avec "Yay! You’re on Rails!". Mettons en place une redirection directe vers la page `ideas`.
 
 Ouvrir `config/routes.rb` et après la première ligne, ajouter :
 
@@ -300,14 +305,10 @@ Ajoutons une simple route au fichier `config/routes.rb`
 ```ruby
 get "pages/info"
 ```
-Vous pouvez maintenant ouvrir le fichier `app/views/pages/info.html.erb` et y ajouter des informations à propos de vous en HTML. Pour voir votre nouvelle page d'informations, rendez vous depuis votre navigateur à l'adresse <http://localhost:3000/pages/info>.
+Vous pouvez maintenant ouvrir le fichier `app/views/pages/info.html.erb` et y ajouter des informations à propos de vous en HTML. Pour voir votre nouvelle page d'informations, rendez-vous depuis votre navigateur à l'adresse <http://localhost:3000/pages/info>.
 
 ##  7. La suite ?
 
-* Personnalisez votre design avec du HTML et du CSS
-* Utilisez du JavaScript pour ajouter de l'interaction utilisateur
-* ...
-
-## Guides supplémentaires
-
-Plusieurs guides pour améliorer votre application sont disponibles (la plupart en anglais) sur <http://guides.railsgirls.com/>.
+* Personnalisez votre design avec du HTML et du CSS.
+* Utilisez du JavaScript pour ajouter de l'interaction utilisateur.
+* Plusieurs guides pour améliorer votre application sont disponibles (la plupart en anglais) sur <http://guides.railsgirls.com/>.
