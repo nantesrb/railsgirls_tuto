@@ -267,13 +267,13 @@ mount_uploader :picture, PictureUploader
 Ouvrir `app/views/ideas/_form.html.erb` et changer :
 
 ```erb
-<%= f.text_field :picture %>
+<%= form.text_field :picture %>
 ```
 
 par :
 
 ```erb
-<%= f.file_field :picture, id: :idea_picture %>
+<%= form.file_field :picture, id: :idea_picture %>
 ```
 Dans votre navigateur, ajouter une idée avec une image. Lorsque vous ajouter une image, ce n'est pas encore très joli parce que ça montre que le chemin (*path*) du fichier, corrigeons ça.
 
