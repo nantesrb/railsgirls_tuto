@@ -109,6 +109,9 @@ Cette commande crée de nouveaux fichiers dans le répertoire du projet, mais po
 
 ```
 rails db:migrate
+```
+
+```
 rails server
 ```
 
